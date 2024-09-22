@@ -8,9 +8,16 @@ function theme_enqueue_styles() {
 }
 
 // Déclarer un fichier JS
-function koukaki_enqueue_script(){
-wp_enqueue_script( 'koukaki-oscar', get_stylesheet_directory_uri() . '/js/script-animation.js', array( 'jquery' ), '1.0', true);
+function koukaki_enqueue_script() {
+    wp_enqueue_script( 
+        'koukaki-oscar', 
+        get_stylesheet_directory_uri() . '/js/scripts-animations.js', 
+        array( 'jquery' ), 
+        '1.0', 
+        true 
+    );
 }
+
 
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {
