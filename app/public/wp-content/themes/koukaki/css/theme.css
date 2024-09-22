@@ -1,3 +1,43 @@
+#oscar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 12em auto 5em auto;
+}
+#oscar .oscarClass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+#oscar .oscarClass img {
+  margin-top: 30px;
+}
+#oscar .oscarClass .textOscar {
+  background-image: url("../assets/images/nuage-orange.png");
+  width: 50%;
+  min-height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#oscar .oscarClass .textOscar p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+  line-height: 52.5px;
+  color: #fff5e9;
+  text-align: left;
+  padding: 0 30px;
+}
+
+body {
+  width: 1440px;
+}
+
 .site-header {
   display: flex;
   flex-direction: column;
@@ -54,6 +94,7 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
+  gap: 40px;
 }
 .burger-menu li {
   list-style: none;
@@ -61,7 +102,7 @@
 }
 .burger-menu li a {
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 64px;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
 }
@@ -72,5 +113,102 @@
 
 .burger-menu.open {
   display: flex;
-  height: 89vh;
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.orchid-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: 80px;
+  left: -60px;
+}
+
+.sunflower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 216px;
+  height: 216px;
+  top: 60px;
+  right: 160px;
+}
+
+.flower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  transform-origin: center center;
+  top: 430px;
+  left: 210px;
+}
+
+.hibiscus-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  transform-origin: center center;
+  bottom: -325px;
+  right: -295px;
+}
+
+.randomflower-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  transform-origin: center center;
+  top: 350px;
+  right: -30px;
+}
+
+.onejiiro-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  transform-origin: center center;
+  bottom: 70px;
+  left: 100px;
+}
+
+.kawaneko-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 140px;
+  left: 250px;
+}
+
+.jaakuna-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 420px;
+  right: 200px;
+}
+
+.logo-menu {
+  position: relative;
+  width: 154px;
+  height: 95px;
+  margin: 40px auto 0 auto;
+  filter: drop-shadow(0px 0px 10px rgba(255, 92, 0, 0.6));
 }/*# sourceMappingURL=theme.css.map */

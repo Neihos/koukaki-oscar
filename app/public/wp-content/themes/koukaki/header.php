@@ -41,6 +41,19 @@
         </nav>
 
 		<div class="burger-menu">
+
+        <img class="logo-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-koukaki.png" alt="Logo koukaki">
+
+        <div class="decor">
+            <img class="orchid-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/orchid.png" alt="Orchidée">
+            <img class="sunflower-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Sunflower.png" alt="Sunflower">
+            <img class="flower-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/flower.png" alt="flower">
+            <img class="hibiscus-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Hibiscus.png" alt="Hibiscus">
+            <img class="randomflower-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/random_flower.png" alt="Random flower">
+            <img class="onejiiro-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Onejiiro.png" alt="Onejiiro">
+            <img class="kawaneko-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Kawaneko.png" alt="Kawaneko">
+            <img class="jaakuna-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Jaakuna.png" alt="Jaakuna">
+        </div>
             
             <ul>
                 <li><a href="#story">Histoire</a></li>

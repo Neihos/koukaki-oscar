@@ -1,0 +1,39 @@
+#oscar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 12em auto 5em auto;
+
+  .oscarClass {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      margin-top: 30px;
+    }
+
+    .textOscar {
+      background-image: url("../assets/images/nuage-orange.png");
+      width: 50%;
+      min-height: auto;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+
+      p {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 42px;
+        line-height: 52.5px;
+        color: #fff5e9;
+        text-align: left;
+        padding: 0 30px;
+      }
+    }
+  }
+}

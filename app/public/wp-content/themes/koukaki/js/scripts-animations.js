@@ -12,4 +12,5 @@ burgerMenuButton.onclick = function () {
     : "fa-solid fa-bars";
 };
 
+//Animations des sections
 
