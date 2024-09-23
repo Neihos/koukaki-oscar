@@ -1,43 +1,67 @@
-#oscar {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  margin: 12em auto 5em auto;
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-#oscar .oscarClass {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: auto;
-  margin-right: auto;
+@keyframes mouvement_onejiiro {
+  0% {
+    bottom: 70px;
+    left: 100px;
+  }
+  50% {
+    bottom: 40px;
+    left: 150px;
+  }
+  100% {
+    bottom: 60px;
+    left: 100px;
+  }
 }
-#oscar .oscarClass img {
-  margin-top: 30px;
+@keyframes mouvement_kawaneko {
+  0% {
+    top: 140px;
+    left: 250px;
+  }
+  50% {
+    top: 90px;
+    left: 260px;
+  }
+  100% {
+    top: 195px;
+    left: 240px;
+  }
 }
-#oscar .oscarClass .textOscar {
-  background-image: url("../assets/images/nuage-orange.png");
-  width: 50%;
-  min-height: auto;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+@keyframes mouvement_jaakuna {
+  0% {
+    top: 420px;
+    right: 200px;
+  }
+  50% {
+    top: 440px;
+    right: 195px;
+  }
+  100% {
+    top: 350px;
+    right: 210px;
+  }
 }
-#oscar .oscarClass .textOscar p {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 42px;
-  line-height: 52.5px;
-  color: #fff5e9;
-  text-align: left;
-  padding: 0 30px;
+@keyframes pulse {
+  0% {
+    transform-origin: center -30px;
+    transform: scale(1.02, 0.98);
+  }
+  50% {
+    transform-origin: center 50px;
+    transform: scale(0.98, 1.02);
+  }
+  100% {
+    transform-origin: center -20px;
+    transform: scale(1.03, 0.97);
+  }
 }
-
-body {
-  width: 1440px;
-}
-
 .site-header {
   display: flex;
   flex-direction: column;
@@ -181,6 +205,7 @@ body {
   transform-origin: center center;
   bottom: 70px;
   left: 100px;
+  animation: mouvement_onejiiro 2s 0.8s ease-in-out alternate infinite;
 }
 
 .kawaneko-menu {
@@ -192,6 +217,7 @@ body {
   transform-origin: center center;
   top: 140px;
   left: 250px;
+  animation: mouvement_kawaneko 2.2s 0.8s ease-in-out alternate infinite;
 }
 
 .jaakuna-menu {
@@ -203,6 +229,7 @@ body {
   transform-origin: center center;
   top: 420px;
   right: 200px;
+  animation: mouvement_jaakuna 2s 0.8s ease-in-out alternate infinite;
 }
 
 .logo-menu {
@@ -211,4 +238,96 @@ body {
   height: 95px;
   margin: 40px auto 0 auto;
   filter: drop-shadow(0px 0px 10px rgba(255, 92, 0, 0.6));
+  animation: pulse 2.2s ease-in-out alternate infinite;
+}
+
+#oscar {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 12em auto 5em auto;
+  position: relative;
+}
+#oscar::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 7em;
+  top: -4em;
+}
+#oscar::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: -5em;
+  top: -15em;
+}
+#oscar .oscarClass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+#oscar .oscarClass img {
+  margin-top: 80px;
+}
+#oscar .oscarClass .textOscar {
+  background-image: url("../assets/images/nuage-orange.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 60%;
+  padding: 50px 0;
+}
+#oscar .oscarClass .textOscar p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+  line-height: 52.5px;
+  color: #fff5e9;
+  text-align: left;
+  text-align: left;
+  padding: 0 100px;
+}
+
+.story__article::after,
+.story h2::after,
+.site-footer ul::after,
+#studio h2::before,
+#studio h2::after,
+.orchid-menu,
+.sunflower-menu,
+.flower-menu,
+.hibiscus-menu,
+.randomflower-menu,
+#oscar::after,
+#oscar::before {
+  animation: rotating 25s linear infinite;
+}
+
+.site-footer::before,
+.site-footer::after {
+  display: none;
+}
+
+.story h2::after {
+  width: 155px;
+  height: 155px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#studio h2::after {
+  width: 109px;
+  height: 109px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#studio h2::before {
+  width: 203px;
+  height: 203px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=theme.css.map */

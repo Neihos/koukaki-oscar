@@ -1,85 +1,64 @@
-//rotation des fleurs
-
-@mixin rota($rot1, $rot2) {
-  from {
-    transform: rotate($rot1);
-  }
-
-  to {
-    transform: rotate($rot2);
-  }
-}
-
 @keyframes rotating {
-  @include rota(0deg, 360deg);
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-// Animations des têtes de chats
-
 @keyframes mouvement_onejiiro {
   0% {
     bottom: 70px;
     left: 100px;
   }
-
   50% {
     bottom: 40px;
     left: 150px;
   }
-
   100% {
     bottom: 60px;
     left: 100px;
   }
 }
-
 @keyframes mouvement_kawaneko {
   0% {
     top: 140px;
     left: 250px;
   }
-
   50% {
     top: 90px;
     left: 260px;
   }
-
   100% {
     top: 195px;
     left: 240px;
   }
 }
-
 @keyframes mouvement_jaakuna {
   0% {
     top: 420px;
     right: 200px;
   }
-
   50% {
     top: 440px;
     right: 195px;
   }
-
   100% {
     top: 350px;
     right: 210px;
   }
 }
-
 @keyframes pulse {
-    0% {
-        transform-origin: center -30px;
-        transform: scale(1.02 , 0.98);
-    }
-
-    50% {
-        transform-origin: center 50px;
-        transform: scale(0.98 , 1.02);
-    }
-
-    100%{
-        transform-origin: center -20px;
-        transform: scale(1.03 , 0.97);
-    }
-}
+  0% {
+    transform-origin: center -30px;
+    transform: scale(1.02, 0.98);
+  }
+  50% {
+    transform-origin: center 50px;
+    transform: scale(0.98, 1.02);
+  }
+  100% {
+    transform-origin: center -20px;
+    transform: scale(1.03, 0.97);
+  }
+}/*# sourceMappingURL=keyframes.css.map */
