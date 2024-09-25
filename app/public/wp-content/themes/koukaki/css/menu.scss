@@ -102,79 +102,79 @@
 }
 
 .flower-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    transform-origin: center center;
-    top: 430px;
-    left: 210px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  transform-origin: center center;
+  top: 430px;
+  left: 210px;
 }
 
 .hibiscus-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    transform-origin: center center;
-    bottom: -325px;
-    right: -295px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  transform-origin: center center;
+  bottom: -325px;
+  right: -295px;
 }
 
 .randomflower-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    transform-origin: center center;
-    top: 350px;
-    right: -30px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  transform-origin: center center;
+  top: 350px;
+  right: -30px;
 }
 
-.onejiiro-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 105px;
-    height: 105px;
-    transform-origin: center center;
-    bottom: 70px;
-    left: 100px;
-    animation: mouvement_onejiiro 2s 0.8s ease-in-out alternate infinite;
+.orenjiiro-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  transform-origin: center center;
+  bottom: 70px;
+  left: 100px;
+  animation: mouvement_orenjiiro 2s 0.8s ease-in-out alternate infinite;
 }
 
 .kawaneko-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 115px;
-    height: 115px;
-    transform-origin: center center;
-    top: 140px;
-    left: 250px;
-    animation: mouvement_kawaneko 2.2s 0.8s ease-in-out alternate infinite;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 140px;
+  left: 250px;
+  animation: mouvement_kawaneko 2s 0.8s ease-in-out alternate infinite;
 }
 
 .jaakuna-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 115px;
-    height: 115px;
-    transform-origin: center center;
-    top: 420px;
-    right: 200px;
-    animation: mouvement_jaakuna 2s 0.8s ease-in-out alternate infinite;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  transform-origin: center center;
+  top: 420px;
+  right: 200px;
+  animation: mouvement_jaakuna 2s 0.8s ease-in-out alternate infinite;
 }
 
 .logo-menu {
-    position: relative;
-    width: 154px;
-    height: 95px;
-    margin: 40px auto 0 auto;
-    filter: drop-shadow(0px 0px 10px #FF5C0099);
-    animation: pulse 2.2s ease-in-out alternate infinite;
+  position: relative;
+  width: 154px;
+  height: 95px;
+  margin: 40px auto 0 auto;
+  filter: drop-shadow(0px 0px 10px #ff5c0099);
+  animation: pulse 2.2s ease-in-out alternate infinite;
 }

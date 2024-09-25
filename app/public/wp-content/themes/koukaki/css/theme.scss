@@ -4,6 +4,8 @@
 
 @import "oscar";
 
+@import "carrousel";
+
 //Animation des fleurs.
 .story__article::after,
 .story h2::after,
@@ -42,4 +44,80 @@
   width: 203px;
   height: 203px;
   object-fit: cover;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 806px;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out;
+
+  .videocats {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-60%, -50%) scale(1);
+    z-index: 2;
+    animation: pulse_2 8s infinite ease-in-out;
+  }
+}
+
+// Animation de la section Lieu
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+  height: 699px;
+  position: relative;
+
+  .petit_nuage,
+  .gros_nuage {
+    position: absolute;
+    filter: blur(13px);
+    transition: transform 0.5s ease-out; // Transition douce
+  }
+
+  .petit_nuage {
+    left: 55rem; // Position initiale
+    top: 20rem;
+    content: url("../assets/images/little_cloud.png"); // Adresse de l'image
+  }
+
+  .gros_nuage {
+    right: 7rem; // Position initiale
+    top: 5rem;
+    content: url("../assets/images/big_cloud.png"); // Adresse de l'image
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+// Animations des sections
+
+#story, #studio {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.titleEffectUp {
+  opacity: 1;
+  animation: fadeInUp 2s ease-in forwards;
+}
+
+
+.titleEffectDown {
+  opacity: 1;
+  animation: fadeInDown 2s ease-in forwards;
 }

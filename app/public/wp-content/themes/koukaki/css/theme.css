@@ -6,7 +6,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes mouvement_onejiiro {
+@keyframes mouvement_orenjiiro {
   0% {
     bottom: 70px;
     left: 100px;
@@ -60,6 +60,85 @@
   100% {
     transform-origin: center -20px;
     transform: scale(1.03, 0.97);
+  }
+}
+@keyframes pulse_2 {
+  0% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+  10% {
+    transform: translate(-80%, -60%) scale(0.92, 1.08);
+  }
+  20% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+  30% {
+    transform: translate(-40%, -40%) scale(0.92, 1.08);
+  }
+  40% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+  50% {
+    transform: translate(-40%, -60%) scale(0.92, 1.08);
+  }
+  60% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+  70% {
+    transform: translate(-80%, -40%) scale(0.92, 1.08);
+  }
+  80% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+  90% {
+    transform: translate(-60%, -50%) scale(1.2, 1.2);
+  }
+  100% {
+    transform: translate(-60%, -50%) scale(1.08, 0.92);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes big_cloud_mouvement {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes little_cloud_mouvement {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 .site-header {
@@ -196,7 +275,7 @@
   right: -30px;
 }
 
-.onejiiro-menu {
+.orenjiiro-menu {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -205,7 +284,7 @@
   transform-origin: center center;
   bottom: 70px;
   left: 100px;
-  animation: mouvement_onejiiro 2s 0.8s ease-in-out alternate infinite;
+  animation: mouvement_orenjiiro 2s 0.8s ease-in-out alternate infinite;
 }
 
 .kawaneko-menu {
@@ -217,7 +296,7 @@
   transform-origin: center center;
   top: 140px;
   left: 250px;
-  animation: mouvement_kawaneko 2.2s 0.8s ease-in-out alternate infinite;
+  animation: mouvement_kawaneko 2s 0.8s ease-in-out alternate infinite;
 }
 
 .jaakuna-menu {
@@ -291,6 +370,48 @@
   padding: 0 100px;
 }
 
+/* animation du carrousel de personnages */
+.main-character {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  align-items: flex-start;
+}
+
+figcaption {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  min-width: 400px;
+  height: 440px;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .story__article::after,
 .story h2::after,
 .site-footer ul::after,
@@ -330,4 +451,71 @@
   height: 203px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 806px;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out;
+}
+.banner .videocats {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.banner img {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-60%, -50%) scale(1);
+  z-index: 2;
+  animation: pulse_2 8s infinite ease-in-out;
+}
+
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+  height: 699px;
+  position: relative;
+}
+.story #place .petit_nuage,
+.story #place .gros_nuage {
+  position: absolute;
+  filter: blur(13px);
+  transition: transform 0.5s ease-out;
+}
+.story #place .petit_nuage {
+  left: 55rem;
+  top: 20rem;
+  content: url("../assets/images/little_cloud.png");
+}
+.story #place .gros_nuage {
+  right: 7rem;
+  top: 5rem;
+  content: url("../assets/images/big_cloud.png");
+}
+.story #place p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#story, #studio {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.titleEffectUp {
+  opacity: 1;
+  animation: fadeInUp 2s ease-in forwards;
+}
+
+.titleEffectDown {
+  opacity: 1;
+  animation: fadeInDown 2s ease-in forwards;
 }/*# sourceMappingURL=theme.css.map */
